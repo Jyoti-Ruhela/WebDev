@@ -1,0 +1,149 @@
+body{
+	background: url("und.jpg") no-repeat;
+	background-size: cover;
+	width: 100%;
+	height: 100vh;
+	position: fixed;
+}
+#menu{
+	width: 45px;
+	height:30px;
+	margin:30px 0 20px 20px;
+	cursor:pointer;
+}
+.bar{
+	height:5px;
+	width:100%;
+	background-color: black;
+	display: block;
+	border-radius: 5px;
+	transition: 0.3s ease;
+}
+#bar1{
+	transform: translateY(-4px);
+}
+#bar3{
+	transform: translateY(4px);
+}
+.nav li a{
+	color: white;
+	text-decoration: none;
+
+}
+.nav li a:hover{
+	font-weight: bold;
+}
+.nav li{
+	margin-left: 200px;
+	list-style: none;
+	padding: 10px 0;
+	font-size:50px;
+	font-family: bold;
+}
+
+.nav{
+	top: 0;
+	left: 0;
+	height: 100%;
+	width: 100%;
+	background-color: black;
+	position: fixed;
+	display: none;
+	transition: 0.3s ease;
+	z-index: 1;
+}
+
+.change .bar{
+	background-color: red;
+}
+.change #bar1{
+	transform: translateY(4px) rotateZ(-45deg);
+}
+.change #bar3{
+	transform: translateY(-6px) rotate(45deg);
+}
+.change #bar2{
+	opacity:0;
+}
+.change{
+	display: block;
+	
+}
+.wrapper{
+	position: absolute;
+	top: 50%;
+	transform: translateY(-50%);
+	width: 100%;
+	padding: 0 20px;
+	height: 70%;
+}
+.contact-form{
+	max-width: 550px;
+	height: 90%;
+	margin:0 auto;
+	background:rgba(0,0,0,0.8);
+	padding: 30px;
+	border-radius: 5px;
+	display: flex;
+	flex-direction: column;
+	box-shadow: 0 0 10px rgba(0,0,0,0.13);
+}
+.input-fields{
+	display: flex;
+	flex-direction: column;
+	margin-right: 4%;
+}
+.input-fields,
+.msg{
+	width: 48%;
+}
+.input-fields .input,
+.msg textarea{
+	margin: 10px 0;
+	background: transparent;
+	border:0;
+	border-bottom: 2px solid #c5ecfd;
+	padding: 10px;
+	color: #c5ecfd;
+	width: 100%;
+}
+.msg textarea{
+	height: 50px;
+}
+::-webkit-input-placeholder{
+	color: #c5ecfd;
+}
+::-moz-input-placeholder{
+	color: #c5ecfd;
+}
+::-ms-input-placeholder{
+	color: #c5ecfd;
+}
+
+.btn{
+	background: #39b7dd;
+	text-align: center;
+	padding: 15px;
+	border-radius: 5px;
+	color: #fff;
+	cursor: pointer;
+	text-transform: uppercase;
+}
+.btn:hover{
+	background-color: red;
+}
+
+@media screen and (max-width: 600px){
+	.contact-form{
+		flex-direction: column;
+	}
+	.msg textarea{
+		height: 80px;
+
+	}
+	.input-fields,
+	.msg{
+		width: 100%;
+	}
+}
+
